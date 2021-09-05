@@ -12,31 +12,31 @@ async def start(_, message: Message):
         text="**Merhaba 👋🏻 {}!**\n\n**Telegram Gruplarının Sesli Sohbetlerinde Müzik Çalabilirim. Sizi şaşırtacak çok sayıda harika özelliklerim var!\n\n **Tıklayınız /Komutlar Daha Fazlası İçin [Mehmet Bey](https://t.me/Mehmett_12) ❤**".format(message.from_user.mention),
         reply_markup=InlineKeyboardMarkup(
             [[
-            InlineKeyboardButton("➕ Grubunuza Ekle ➕", url="https://t.me/RgMusiccbot?startgroup=true")
+            InlineKeyboardButton("➕ Grubunuza Ekle ➕", url="https://t.me/HatiralaraMusicbot?startgroup=true")
             ],[
-            InlineKeyboardButton(" Group 💬", url="https://t.me/RgSohbet"),
-            InlineKeyboardButton("Channel 📣", url="https://t.me/RgBotSupport")
+            InlineKeyboardButton(" Group 💬", url="https://t.me/Sancakailesi"),
+            InlineKeyboardButton("Channel 📣", url="https://t.me/MangoDestek")
             ],[
-            InlineKeyboardButton("Tasarım 👨‍💻", url="https://t.me/EfsaneStar"),
-            InlineKeyboardButton("Kurucu Sahip 👨‍💻", url="https://t.me/Mehmett_12")
+            InlineKeyboardButton("Tasarım 👨‍💻", url="https://t.me/Ucretlibotlar"),
+            InlineKeyboardButton("Kurucu Sahip 👨‍💻", url="https://t.me/kizilsancakbilgi")
             ]]
         ),
         disable_web_page_preview=True
     )
 
-@Client.on_message(filters.command(["start", "start@RgMusiccbot"]) & ~filters.private & ~filters.channel)
+@Client.on_message(filters.command(["start", "start@HatiralaraMusicbot"]) & ~filters.private & ~filters.channel)
 async def gstart(_, message: Message):
       await message.reply_text(
-          text="**RG Music Is Online ✅**",
+          text="**Hatira Music Is Online ✅**",
           reply_markup=InlineKeyboardMarkup(
               [[
-              InlineKeyboardButton(text="🎛️ Support Group 🎛️", url="https://t.me/RgBotSupport")
+              InlineKeyboardButton(text="🎛️ Support Group 🎛️", url="https://t.me/MangoDestek")
               ]]
           )
       )
 
 
-@Client.on_message(filters.command(["Komutlar", "start@sohbetlobisi"]) & filters.private & ~filters.channel)
+@Client.on_message(filters.command(["Komutlar", "start@kizilsancak"]) & filters.private & ~filters.channel)
 async def Komutlar(_, message: Message):
     await message.reply_text(
         text="""**RG Music Bot : Help Menu**
@@ -58,7 +58,7 @@ __× Önce Beni Grubunuza Ekleyin..
 """,
         reply_markup=InlineKeyboardMarkup(
               [[
-              InlineKeyboardButton(text="🎛️ Support Group 🎛️", url="https://t.me/RgSohbet")
+              InlineKeyboardButton(text="🎛️ Support Group 🎛️", url="https://t.me/MangoDestek")
               ]]
           )
       
